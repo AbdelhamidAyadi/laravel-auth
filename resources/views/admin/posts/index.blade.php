@@ -20,12 +20,12 @@
         <div class="card-body">
             <img class="mb-3 rounded" width="50%" src="{{$post->image}}" alt="" srcset="">
             <p class="card-text">{{ $post->content }}</p>
-            <a href="{{ route('admin.posts.show', $post->id ) }}" class="btn btn-primary">Details</a>
-            <a href="{{ route('admin.posts.edit', $post->id ) }}"  class="btn btn-warning">Edit</a>
+            <a href="{{ route('admin.posts.show', $post->id ) }}" class="btn btn-primary"><i class="fa-solid fa-circle-info"></i></a>
+            <a href="{{ route('admin.posts.edit', $post->id ) }}"  class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
             <form class="delete-form d-inline" action="{{ route('admin.posts.destroy', $post->id ) }}" method="POST">
                 @method('Delete')
                 @csrf
-                <button type="submit" class="btn btn-danger">Delete</button>
+                <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
             </form>
         </div>
         <div class="card-footer text-muted">
